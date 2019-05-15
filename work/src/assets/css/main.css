@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+html{
+  font-size: 625%;
+}
+/*-------------------------------basic------------------------------*/
+.btnGroup{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.group-btn{
+  margin-left: 4px;
+}
+.middleMode{
+  border: 1px solid #91d5ff;
+  background-color: #e6f7ff;
+  height: 48px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.pageGroup{
+  margin-right: 8px;
+}
+.hideInput input[type='file']{
+  display: none !important;
+}
