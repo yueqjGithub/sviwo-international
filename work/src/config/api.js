@@ -107,7 +107,9 @@ const urlList = {
   // 根据菜单Id获取该菜单现有资源
   findPermIdByMenuId: host + '/admin/permission/findPermIdByMenuId',
   // 菜单绑定权限
-  menuBindingPerm: host + '/admin/permission/menuBindingPerm'
+  menuBindingPerm: host + '/admin/permission/menuBindingPerm',
+  // 系统参数配置
+  getDicType: host + '/admin/dicType/getDicType'
 }
 
 export default urlList
