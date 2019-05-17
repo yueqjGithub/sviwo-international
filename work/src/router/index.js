@@ -26,6 +26,8 @@ import sysRole from '@/pages/role/roleList'
 import permList from '@/pages/permission/permList'
 // 菜单管理
 import menuList from '@/pages/menuManage/menuList'
+// 系统参数配置
+import dicType from '@/pages/sysConfig/dicType'
 
 Vue.use(Router)
 
@@ -112,6 +114,13 @@ export default new Router({
       path: '/menuList',
       name: 'menuList',
       component: menuList,
+      meta: {keepAlive: false, layout: true},
+      beforeEnter: auth
+    },
+    { // 系统参数配置
+      path: '/dicType',
+      name: 'dicType',
+      component: dicType,
       meta: {keepAlive: false, layout: true},
       beforeEnter: auth
     },

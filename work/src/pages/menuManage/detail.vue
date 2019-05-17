@@ -194,15 +194,6 @@ export default {
     addSubmit () {
       let vm = this
       let langArray = []
-      for (let k in vm.countryArray) {
-        if (vm.countryArray[k].value) {
-          langArray.push({'zhCode': vm.cArray.find(item => item.countryCode === vm.countryArray[k].countryCode).code,
-            'text': vm.countryArray[k].value.trim()})
-        } else {
-          vm.$message.error('除图标和父级及备注，其他为必填项')
-          return false
-        }
-      }
       let addOpt = {
         // menuName: langArray,
         link: vm.options.menuUrl,
@@ -224,6 +215,15 @@ export default {
       addOpt['remark'] = vm.options.remark
       if (vm.view === 1) {
         addOpt['createUser'] = sessionStorage.getItem('sysUserId')
+        for (let k in vm.countryArray) {
+          if (vm.countryArray[k].value) {
+            langArray.push({'zhCode': vm.cArray.find(item => item.countryCode === vm.countryArray[k].countryCode).code,
+              'text': vm.countryArray[k].value.trim()})
+          } else {
+            vm.$message.error('除图标和父级及备注，其他为必填项')
+            return false
+          }
+        }
         addOpt['international'] = JSON.stringify(langArray)
       } else if (vm.view === 2) {
         addOpt['menuId'] = vm.init.menuId

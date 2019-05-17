@@ -109,7 +109,9 @@ const urlList = {
   // 菜单绑定权限
   menuBindingPerm: host + '/admin/permission/menuBindingPerm',
   // 系统参数配置
-  getDicType: host + '/admin/dicType/getDicType'
+  getDicType: host + '/admin/dic/getDicType',
+  // 修改或添加系统参数类型
+  addOrUpdateDicType: host + '/admin/dic/addOrUpdateDicType'
 }
 
 export default urlList
